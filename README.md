@@ -13,6 +13,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Lista inicial de vagas em memória
 - Rota para listar vagas: `GET /jobs`
 - Rota para criar uma nova vaga: `POST /jobs`
+- Rota para buscar uma vaga pelo ID: `GET /jobs/:id`
 
 ## Rotas da API
 

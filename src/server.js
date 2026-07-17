@@ -30,6 +30,20 @@ app.post('/jobs', (req, res)=> {
     res.status(201).json(job);
 });
 
+app.get('/jobs/:id', (req, res)=> {
+    const id = Number(req.params.id);
+
+    const job = jobs.find((job)=> job.id === id);
+
+    if(!job){
+        return res.status(404).json({
+            message: 'Job not found'
+        })
+    }
+
+    return res.status(200).json(job);
+});
+
 
 app.get('/health', (req, res) => {
     res.status(200).json({
