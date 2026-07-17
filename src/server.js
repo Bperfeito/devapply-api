@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 3000;
 
 const jobs = [
@@ -14,6 +15,20 @@ const jobs = [
 app.get('/jobs', (req, res)=> {
     res.status(200).json(jobs);
 })
+
+app.post('/jobs', (req, res)=> {
+    const { company, role, status } = req.body;
+    const job = {
+        id: jobs.length +1,
+        company,
+        role,
+        status
+    };
+
+    jobs.push(job);
+
+    res.status(201).json(job);
+});
 
 
 app.get('/health', (req, res) => {
