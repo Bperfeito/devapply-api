@@ -15,6 +15,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Rota para criar uma nova vaga: `POST /jobs`
 - Rota para buscar uma vaga pelo ID: `GET /jobs/:id`
 - Rota para atualizar parcialmente uma vaga: `PATCH /jobs/:id`
+- Rota para deletar uma vaga: `DELETE /jobs/:id`
 
 ## Rotas da API
 

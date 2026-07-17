@@ -70,6 +70,22 @@ app.patch('/jobs/:id', (req, res)=> {
     return res.status(200).json(job);
 });
 
+app.delete('/jobs/:id', (req, res)=> {
+    const id = Number(req.params.id);
+
+    const jobIndex = jobs.findIndex((job)=> job.id === id);
+
+    if(jobIndex === -1){
+        return res.status(404).json({
+            message: 'Job not found'
+        });
+    }
+
+    jobs.splice(jobIndex, 1);
+    
+    return res.status(204).send();
+});
+
 
 app.get('/health', (req, res) => {
     res.status(200).json({
