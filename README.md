@@ -37,9 +37,9 @@ Exemplo de corpo da requisição:
   "status": "applied"
 }
 
+```
 ## Tecnologias usadas até agora
 
 - Node.js
 - Express
 - JavaScript
-```
