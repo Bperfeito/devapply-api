@@ -39,7 +39,7 @@ Exemplo de corpo da requisição:
 
 ```
 
-## Tecnologias usadas até agora
+## Stacks
 
 - Node.js
 - Express
