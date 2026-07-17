@@ -16,6 +16,8 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Rota para buscar uma vaga pelo ID: `GET /jobs/:id`
 - Rota para atualizar parcialmente uma vaga: `PATCH /jobs/:id`
 - Rota para deletar uma vaga: `DELETE /jobs/:id`
+- Validação dos dados ao criar uma vaga
+- Status permitidos: `saved`, `applied`, `interview`, `test`, `rejected`, `approved`
 
 ## Rotas da API
 

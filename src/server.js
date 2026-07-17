@@ -12,12 +12,46 @@ const jobs = [
     }
 ];
 
+const allowedStatuses = [
+    'saved',
+    'applied',
+    'interview',
+    'test',
+    'rejected',
+    'approved'
+];
+
 app.get('/jobs', (req, res)=> {
     res.status(200).json(jobs);
 })
 
 app.post('/jobs', (req, res)=> {
     const { company, role, status } = req.body;
+
+    if(!company){
+        return res.status(400).json({
+            message: 'Company is required'
+        });
+    }
+
+    if(!role){
+        return res.status(400).json({
+            message: 'Role is required'
+        });
+    }
+
+    if(!status){
+        return res.status(400).json({
+            message: 'Status is required'
+        });
+    }
+
+    if(!allowedStatuses.includes(status)){
+        return res.status(400).json({
+            message: 'Invalid status'
+        });
+    }
+
     const job = {
         id: jobs.length +1,
         company,
@@ -82,7 +116,7 @@ app.delete('/jobs/:id', (req, res)=> {
     }
 
     jobs.splice(jobIndex, 1);
-    
+
     return res.status(204).send();
 });
 
