@@ -14,6 +14,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Rota para listar vagas: `GET /jobs`
 - Rota para criar uma nova vaga: `POST /jobs`
 - Rota para buscar uma vaga pelo ID: `GET /jobs/:id`
+- Rota para atualizar parcialmente uma vaga: `PATCH /jobs/:id`
 
 ## Rotas da API
 
@@ -37,7 +38,6 @@ Exemplo de corpo da requisição:
   "role": "Backend Developer Intern",
   "status": "applied"
 }
-
 ```
 
 ## Stacks

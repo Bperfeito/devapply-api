@@ -44,6 +44,32 @@ app.get('/jobs/:id', (req, res)=> {
     return res.status(200).json(job);
 });
 
+app.patch('/jobs/:id', (req, res)=> {
+    const id = Number(req.params.id);
+    const job = jobs.find((job)=> job.id === id);
+
+    if(!job){
+        return res.status(404).json({
+            message: "Job not found"
+        });
+    }
+
+    const {company, role, status} = req.body;
+    if(company){
+        job.company = company;
+    }
+
+    if(role){
+        job.role = rolem;
+    }
+
+    if(status){
+        job.status = status;
+    }
+
+    return res.status(200).json(job);
+});
+
 
 app.get('/health', (req, res) => {
     res.status(200).json({
