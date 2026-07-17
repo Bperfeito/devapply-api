@@ -88,7 +88,20 @@ app.patch('/jobs/:id', (req, res)=> {
         });
     }
 
-    const {company, role, status} = req.body;
+    const {company, role, status} = req.body || {};
+
+    if(!company && !role && !status){
+        return res.status(400).json({
+            message: 'At least one field must be provided'
+        });
+    }
+
+    if(status && !allowedStatuses.includes(status)){
+        return res.status(400).json({
+            message: 'Invalid status'
+        });
+    }
+
     if(company){
         job.company = company;
     }

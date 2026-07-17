@@ -18,6 +18,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Rota para deletar uma vaga: `DELETE /jobs/:id`
 - Validação dos dados ao criar uma vaga
 - Status permitidos: `saved`, `applied`, `interview`, `test`, `rejected`, `approved`
+- Validação dos dados ao atualizar uma vaga
 
 ## Rotas da API
 
