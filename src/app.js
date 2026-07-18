@@ -1,5 +1,6 @@
 const express = require ('express');
 const jobsRoutes = require('./routes/jobs.routes');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
@@ -19,5 +20,7 @@ app.use((req, res)=> {
         message: 'Route not found'
     });
 });
+
+app.use(errorHandler);
 
 module.exports = app;
