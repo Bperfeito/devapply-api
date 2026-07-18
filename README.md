@@ -22,6 +22,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Organização das rotas em arquivo separado
 - Separação dos dados em módulo próprio
 - Separação da lógica de vagas em controllers
+- Separação entre configuração da aplicação (`app.js`) e inicialização do servidor (`server.js`)
 
 ## Rotas da API
 
