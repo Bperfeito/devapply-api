@@ -53,11 +53,29 @@ Exemplo de corpo da requisição:
 - Express
 - JavaScript
 
+## Ferramentas de Desenvolvimento
+
+````md
+- Nodemon
+- Thunder Client
+
 ## Como rodar o projeto
 
-Para rodar em desenvolvimento utilizamos o nodemon.
+Instale as dependências:
 
 ```bash
 npm install
+```
+````
+
+Rode em desenvolvimento:
+
+```bash
 npm run dev
+```
+
+Rode em modo normal:
+
+```bash
+npm start
 ```
