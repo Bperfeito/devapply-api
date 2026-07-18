@@ -23,6 +23,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Separação dos dados em módulo próprio
 - Separação da lógica de vagas em controllers
 - Separação entre configuração da aplicação (`app.js`) e inicialização do servidor (`server.js`)
+- Tratamento global para rotas não encontradas
 
 ## Rotas da API
 
@@ -56,10 +57,10 @@ Exemplo de corpo da requisição:
 
 ## Ferramentas de Desenvolvimento
 
-````md
+```md
 - Nodemon
 - Thunder Client
-````
+```
 
 ## Como rodar o projeto
 
