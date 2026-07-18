@@ -55,6 +55,8 @@ Exemplo de corpo da requisição:
 
 ## Como rodar o projeto
 
+Para rodar em desenvolvimento utilizamos o nodemon.
+
 ```bash
 npm install
 npm run dev
