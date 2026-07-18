@@ -19,6 +19,8 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Validação dos dados ao criar uma vaga
 - Status permitidos: `saved`, `applied`, `interview`, `test`, `rejected`, `approved`
 - Validação dos dados ao atualizar uma vaga
+- Organização das rotas em arquivo separado
+- Separação dos dados em módulo próprio
 
 ## Rotas da API
 
