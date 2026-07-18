@@ -52,3 +52,10 @@ Exemplo de corpo da requisição:
 - Node.js
 - Express
 - JavaScript
+
+## Como rodar o projeto
+
+```bash
+npm install
+npm run dev
+```
