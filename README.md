@@ -67,7 +67,6 @@ Instale as dependências:
 ```bash
 npm install
 ```
-````
 
 Rode em desenvolvimento:
 
