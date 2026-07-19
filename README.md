@@ -25,6 +25,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Separação entre configuração da aplicação (`app.js`) e inicialização do servidor (`server.js`)
 - Tratamento global para rotas não encontradas
 - Middleware global para tratamento de erros inesperados
+- Extração da validação de status para função utilitária
 
 ## Rotas da API
 

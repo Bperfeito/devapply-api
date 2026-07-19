@@ -1,4 +1,5 @@
 const { jobs, allowedStatuses} = require('../data/jobs');
+const isValidStatus = require('../utils/validateStatus');
 
 function listJobs(req, res){
     return res.status(200).json(jobs);
@@ -25,7 +26,7 @@ function createJob (req, res){
         });
     }
 
-    if(!allowedStatuses.includes(status)){
+    if(!isValidStatus(status)){
         return res.status(400).json({
             message: 'Invalid status'
         });
@@ -72,7 +73,7 @@ function updateJob(req, res){
         });
     }
 
-    if(status && !allowedStatuses.includes(status)){
+    if(status && !isValidStatus(status)){
         return res.status(400).json({
             message: 'Invalid status'
         });
