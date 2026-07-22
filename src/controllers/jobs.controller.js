@@ -4,7 +4,7 @@ const isValidStatus = require('../utils/validateStatus');
 const findJobById = require('../utils/findJobById');
 const findJobIndexById = require('../utils/findJobIndexById');
 
-const {listJobsService} = require('../services/jobs.service');
+const {listJobsService, createJobService} = require('../services/jobs.service');
 
 function listJobs(req, res){
     const jobs = listJobsService();
@@ -39,11 +39,10 @@ function createJob (req, res){
         });
     }
 
-    const job = {
-        id: jobs.length +1, company, role, status
-    };
-
-    jobs.push(job);
+    const job = createJobService({
+        company,
+        role,
+        status});
 
     return res.status(201).json(job);
 }
