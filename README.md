@@ -28,6 +28,8 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Extração da validação de status para função utilitária
 - Extração da busca de vaga por ID para função utilitária
 - Extração da busca do índice da vaga por ID para função utilitária
+- Criação da camada de services para regras de negócio
+- Extração da listagem de vagas para `listJobsService`
 
 ## Rotas da API
 

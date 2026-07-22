@@ -4,7 +4,11 @@ const isValidStatus = require('../utils/validateStatus');
 const findJobById = require('../utils/findJobById');
 const findJobIndexById = require('../utils/findJobIndexById');
 
+const {listJobsService} = require('../services/jobs.service');
+
 function listJobs(req, res){
+    const jobs = listJobsService();
+
     return res.status(200).json(jobs);
 }
 
