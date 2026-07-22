@@ -2,6 +2,7 @@ const { jobs, allowedStatuses} = require('../data/jobs');
 const isValidStatus = require('../utils/validateStatus');
 
 const findJobById = require('../utils/findJobById');
+const findJobIndexById = require('../utils/findJobIndexById');
 
 function listJobs(req, res){
     return res.status(200).json(jobs);
@@ -100,7 +101,7 @@ function updateJob(req, res){
 function deleteJob (req, res){
     const id = Number(req.params.id);
 
-    const jobIndex = jobs.findIndex((job)=> job.id === id);
+    const jobIndex = findJobIndexById(id);
 
     if(jobIndex === -1){
         return res.status(404).json({

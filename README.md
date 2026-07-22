@@ -27,6 +27,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Middleware global para tratamento de erros inesperados
 - Extração da validação de status para função utilitária
 - Extração da busca de vaga por ID para função utilitária
+- Extração da busca do índice da vaga por ID para função utilitária
 
 ## Rotas da API
 
