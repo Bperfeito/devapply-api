@@ -1,4 +1,5 @@
 const { jobs } = require ('../data/jobs');
+const findJobById = require('../utils/findJobById');
 
 function listJobsService(){
     return jobs;
@@ -16,7 +17,12 @@ function createJobService({company, role, status}){
     return job;
 }
 
+function getJobByIdService(id) {
+    return findJobById(id);
+}
+
 module.exports = {
     listJobsService,
-    createJobService
+    createJobService,
+    getJobByIdService
 };
