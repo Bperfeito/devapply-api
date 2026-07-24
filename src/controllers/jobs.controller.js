@@ -2,6 +2,8 @@ const isValidStatus = require('../utils/validateStatus');
 
 const {listJobsService, createJobService, getJobByIdService, updateJobService, deleteJobService} = require('../services/jobs.service');
 
+const messages = require('../constants/messages');
+
 function listJobs(req, res){
     const jobs = listJobsService();
 
@@ -50,7 +52,7 @@ function getJobById(req, res){
 
     if(!job){
         return res.status(404).json({
-            message:' Job not found'
+            message: messages.jobNotFound
         });
     }
     return res.status(200).json(job);
@@ -94,7 +96,7 @@ function deleteJob (req, res){
 
     if(!deleted){
         return res.status(404).json({
-            message: 'Job not found'
+            message: messages.jobNotFound
         });
     }
 
