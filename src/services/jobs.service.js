@@ -21,8 +21,30 @@ function getJobByIdService(id) {
     return findJobById(id);
 }
 
+function updateJobService(id, {company, role, status}){
+    const job = findJobById(id);
+
+    if(!job){
+        return null;
+    }
+     if(company){
+        job.company = company;
+     }
+
+     if(role){
+        job.role = role;
+     }
+
+     if(status){
+        job.status = status;
+     }
+
+     return job;
+}
+
 module.exports = {
     listJobsService,
     createJobService,
-    getJobByIdService
+    getJobByIdService,
+    updateJobService
 };

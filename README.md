@@ -32,6 +32,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Extração da listagem de vagas para `listJobsService`
 - Extração da criação de vagas para a camada de services
 - Extração da busca de vaga por ID para a camada de services
+- Extração da atualização de vaga para a camada de services
 
 ## Rotas da API
 
