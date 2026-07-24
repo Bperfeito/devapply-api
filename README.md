@@ -34,7 +34,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Extração da busca de vaga por ID para a camada de services
 - Extração da atualização de vaga para a camada de services
 - Extração de deletar vaga para a camada de services
-- Atualização de vaga mais limpa no controller
+- Limpeza do controller de atualização de vaga após extração para service
 
 ## Rotas da API
 
