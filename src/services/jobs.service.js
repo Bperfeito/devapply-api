@@ -1,6 +1,8 @@
 const { jobs } = require ('../data/jobs');
 const findJobById = require('../utils/findJobById');
 
+const findJobIndexById = require('../utils/findJobIndexById');
+
 function listJobsService(){
     return jobs;
 } 
@@ -42,9 +44,22 @@ function updateJobService(id, {company, role, status}){
      return job;
 }
 
+function deleteJobService(id) {
+    const jobIndex = findJobIndexById(id)
+
+    if(jobIndex === -1){
+        return false;
+    }
+
+    jobs.splice(jobIndex, 1);
+
+    return true;
+}
+
 module.exports = {
     listJobsService,
     createJobService,
     getJobByIdService,
-    updateJobService
+    updateJobService,
+    deleteJobService
 };

@@ -2,9 +2,8 @@ const { jobs, allowedStatuses} = require('../data/jobs');
 const isValidStatus = require('../utils/validateStatus');
 
 const findJobById = require('../utils/findJobById');
-const findJobIndexById = require('../utils/findJobIndexById');
 
-const {listJobsService, createJobService, getJobByIdService, updateJobService} = require('../services/jobs.service');
+const {listJobsService, createJobService, getJobByIdService, updateJobService, deleteJobService} = require('../services/jobs.service');
 
 function listJobs(req, res){
     const jobs = listJobsService();
@@ -106,15 +105,13 @@ function updateJob(req, res){
 function deleteJob (req, res){
     const id = Number(req.params.id);
 
-    const jobIndex = findJobIndexById(id);
+    const deleted = deleteJobService(id);
 
-    if(jobIndex === -1){
+    if(!deleted){
         return res.status(404).json({
             message: 'Job not found'
         });
     }
-
-    jobs.splice(jobIndex, 1);
 
     return res.status(204).send();
 }
