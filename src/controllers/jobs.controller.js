@@ -1,7 +1,4 @@
-const { jobs, allowedStatuses} = require('../data/jobs');
 const isValidStatus = require('../utils/validateStatus');
-
-const findJobById = require('../utils/findJobById');
 
 const {listJobsService, createJobService, getJobByIdService, updateJobService, deleteJobService} = require('../services/jobs.service');
 
@@ -62,7 +59,7 @@ function getJobById(req, res){
 function updateJob(req, res){
     const id = Number(req.params.id);
 
-    const job = findJobById(id);
+    const job = getJobByIdService(id);
 
     if(!job){
         return res.status(404).json({
@@ -82,18 +79,6 @@ function updateJob(req, res){
         return res.status(400).json({
             message: 'Invalid status'
         });
-    }
-
-    if(company){
-        job.company = company;
-    }
-
-    if(role){
-        job.role = role;
-    }
-
-    if(status){
-        job.status = status;
     }
 
     const updateJob = updateJobService(id, {company, role, status});
