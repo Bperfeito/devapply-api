@@ -15,25 +15,25 @@ function createJob (req, res){
 
     if(!company){
         return res.status(400).json({
-            message: 'Company is required'
+            message: messages.companyRequired
         });
     }
 
     if(!role){
         return res.status(400).json({
-            message: 'Role is required'
+            message: messages.roleRequired
         });
     }
 
     if(!status){
         return res.status(400).json({
-            message: 'Status is required'
+            message: messages.statusRequired
         });
     }
 
     if(!isValidStatus(status)){
         return res.status(400).json({
-            message: 'Invalid status'
+            message: messages.invalidStatus
         });
     }
 
@@ -65,7 +65,7 @@ function updateJob(req, res){
 
     if(!job){
         return res.status(404).json({
-            message: 'Job is not found'
+            message: messages.jobNotFound
         })
     }
 
@@ -73,7 +73,7 @@ function updateJob(req, res){
 
     if(!company && !role && !status){
         return res.status(400).json({
-            message: 'At least one field must be provieded'
+            message: messages.atLeastOneFieldRequired
         });
     }
 
