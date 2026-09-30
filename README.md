@@ -35,6 +35,7 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Extração da atualização de vaga para a camada de services
 - Extração de deletar vaga para a camada de services
 - Limpeza do controller de atualização de vaga após extração para service
+- Centralização das mensagens de erro e validação em constantes reutilizáveis.
 
 ## Rotas da API
 
@@ -72,6 +73,14 @@ Exemplo de corpo da requisição:
 - Nodemon
 - Thunder Client
 ```
+
+## Tratamento de erros
+
+A API possui tratamento centralizado para respostas de erro.
+
+- Mensagens de validação são organizadas em `src/constants/messages.js`.
+- Rotas inexistentes retornam o status `404` com uma mensagem padronizada.
+- Erros inesperados são tratados por um middleware global e retornam o status `500`.
 
 ## Como rodar o projeto
 

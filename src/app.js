@@ -1,6 +1,7 @@
 const express = require ('express');
 const jobsRoutes = require('./routes/jobs.routes');
 const errorHandler = require('./middlewares/errorHandler');
+const messages = require('./constants/messages');
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.use('/jobs', jobsRoutes);
 
 app.use((req, res)=> {
     return res.status(404).json({
-        message: 'Route not found'
+        message: messages.routeNotFound
     });
 });
 
