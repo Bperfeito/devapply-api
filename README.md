@@ -36,6 +36,9 @@ Este projeto está sendo desenvolvido como parte do meu aprendizado em backend, 
 - Extração de deletar vaga para a camada de services
 - Limpeza do controller de atualização de vaga após extração para service
 - Centralização das mensagens de erro e validação em constantes reutilizáveis.
+- Erros esperados da aplicação são representados pela classe `AppError`.
+- Controllers encaminham erros para o middleware global usando `next(error)`.
+- O middleware global padroniza as respostas de erro com status e mensagem apropriados.
 
 ## Rotas da API
 
